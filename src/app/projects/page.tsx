@@ -28,6 +28,13 @@ const projectsPage = () => {
       tags: ["PHP", "Laravel", "MySql","Apache"],
       link: "https://hospitaldirghayu.com/",
     },
+    {
+      title: "Baagchaal",
+      description:
+        "Basic C programming based Baagchaal Game",
+      tags: ["C"],
+      link: "https://drive.google.com/drive/folders/1vLILy0j6TXGFblW4qq4JU78qj0NKqHzE?usp=sharing",
+    },
   ];
 
   return (
