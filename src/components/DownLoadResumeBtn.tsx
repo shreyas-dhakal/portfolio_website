@@ -8,7 +8,7 @@ import HackerBtn from './animation/HackerBtn'
 function DownLoadResumeBtn() {
   return (
     <div className="h-fit w-full mt-2 py-2 px-4">
-    <a href='https://drive.google.com/file/d/1iXKRaTL1J-UqZJA--jI2Wa8C4INXt2wF/view?usp=sharing'><HackerBtn label='View Resume'/></a>
+    <a href='https://drive.google.com/file/d/1Uk5FlIqfXIDe-ZLro0s3dZHtTwnj_1J8/view?usp=sharing'><HackerBtn label='View Resume'/></a>
   </div>
   )
 }
