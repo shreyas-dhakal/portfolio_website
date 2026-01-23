@@ -143,3 +143,9 @@
     transform: translateY(-83.33%);
   }
 }
+@keyframes glow {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+
+

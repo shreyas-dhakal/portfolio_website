@@ -71,13 +71,48 @@ export default function RootLayout({
       <body className={`${poppins.variable} ${rubik.variable}`}>
 <main
   className={cn(
-    "relative flex min-h-screen h-dvh items-center justify-between pt-14 pb-4 px-40 max-md:px-6 max-sm:pt-20",
-    "bg-[radial-gradient(circle_at_20%_20%,rgba(99,102,241,0.25),transparent_40%),radial-gradient(circle_at_80%_30%,rgba(236,72,153,0.25),transparent_40%),radial-gradient(circle_at_50%_80%,rgba(14,165,233,0.25),transparent_40%)]"
+    "relative flex min-h-screen h-dvh items-center justify-between pt-14 pb-4 px-40 max-md:px-6 max-sm:pt-20 overflow-hidden"
   )}
 >
+  {/* Animated background */}
+<div className="absolute inset-0 -z-10 pointer-events-none">
+  {/* Top-left */}
+  <div
+    className="
+      absolute inset-0
+      animate-[glow_4s_ease-in-out_infinite]
+      [animation-delay:-2s]
+      bg-[radial-gradient(circle_at_20%_20%,rgba(2,132,199,0.30),transparent_100%)]
+    "
+  />
+
+  {/* Top-right */}
+  <div
+    className="
+      absolute inset-0
+      animate-[glow_8s_ease-in-out_infinite]
+      [animation-delay:-6s]
+      bg-[radial-gradient(circle_at_80%_30%,rgba(2,132,199,0.20),transparent_80%)]
+    "
+  />
+
+  {/* Bottom-center */}
+  <div
+    className="
+      absolute inset-0
+      animate-[glow_12s_ease-in-out_infinite]
+      [animation-delay:-10s]
+      bg-[radial-gradient(circle_at_50%_80%,rgba(2,132,199,0.14),transparent_50%)]
+    "
+  />
+</div>
+
+
+
   <Navbar />
   {children}
 </main>
+
 
       </body>
     </html>
