@@ -7,8 +7,7 @@ const Aboutfooter = () => {
         {name:"Language", answer:"English, Nepali", icon:<Languages className="h-11 w-11" />},
         {name:"Nationality",answer:"Nepal", icon:<Globe2   className="h-8 w-8" />},
         {name:"Gender",answer:"Male", icon:<Dna  className="h-8 w-8" />},
-        {name:"Gen",answer:"Male", icon:<Dna  className="h-8 w-8" />},
-        {name:"Gene",answer:"Male", icon:<Dna  className="h-8 w-8" />}
+
     ]
 
 
