@@ -107,8 +107,33 @@ export default function RootLayout({
   />
 </div>
 
+<div className="absolute inset-0 -z-10 pointer-events-none">
+  {/* Top-left diagonal lines */}
+<div
+  className="
+    absolute top-0 left-0 w-[40rem] h-[40rem]
+    bg-[repeating-linear-gradient(135deg,rgba(2,132,199,0.35)_0px,rgba(2,132,199,0.35)_1px,transparent_1px,transparent_10px)]
+    mix-blend-screen
+    opacity-70
+    [mask-image:radial-gradient(circle_at_top_left,black,transparent_70%)]
+    [-webkit-mask-image:radial-gradient(circle_at_top_left,black,transparent_70%)]
 
+  "
+/>
 
+<div
+  className="
+    absolute bottom-0 right-0 w-[40rem] h-[40rem]
+    bg-[repeating-linear-gradient(135deg,rgba(2,132,199,0.25)_0px,rgba(2,132,199,0.25)_1px,transparent_1px,transparent_12px)]
+    mix-blend-screen
+    opacity-60
+    [mask-image:radial-gradient(circle_at_bottom_right,black,transparent_70%)]
+    [-webkit-mask-image:radial-gradient(circle_at_bottom_right,black,transparent_70%)]
+    animate-[diagonal-slide_7s_linear_infinite_reverse]
+  "
+/>
+
+</div>
   <Navbar />
   {children}
 </main>
