@@ -38,6 +38,7 @@ const page = () => {
         delay={0.3}
       >
         <Aboutfooter />
+        
       </FramerWrapper>
       <FramerWrapper className="block" y={100} delay={0.31}>
         <h1 className="gap-2 text-3xl font-poppins text-primary font-semibold flex icon_underline relative max-sm:text-2xl">

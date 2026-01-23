@@ -53,6 +53,13 @@ const Navbar = () => {
       href: '/education',
     },
     {
+      title: 'Experience',
+      icon: (
+        <Briefcase className='h-full w-full ' />
+      ),
+      href: '/experience',
+    },
+    {
       title: 'Projects',
       icon: (
         <FolderGit2 className='h-full w-full ' />
@@ -61,7 +68,7 @@ const Navbar = () => {
     },
    
     {
-      title: 'Contact us',
+      title: 'Contact Me',
       icon: (
         <Mail className='h-full w-full ' />
       ),
