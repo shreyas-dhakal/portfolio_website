@@ -26,9 +26,8 @@ const page = () => {
 
         <FramerWrapper y={0} x={100}>
           <p className=" font-poppins text-xl w-full text-primary max-sm:text-lg ">
-            I am an AI Engineer from Bhaktapur, Nepal. I&apos;m passionate about research and
-            doing AI-based projects. I specialize in AI Agents and machine learning frameworks focusing on
-            especially in LLMs. Filled with insane drive and passion, I am eager to contribute and explore in fields of implications of Artificial Intelligence in the real world.
+            I am an AI Engineer, originally from Nepal and currently living in Adelaide, Australia. I&apos;m passionate about research and
+            doing AI-based projects. I specialize in AI Agents and machine learning frameworks focusing in LLMs. Filled with insane drive and passion, I am eager to contribute and explore in fields of implications of Artificial Intelligence in the real world.
           </p>
         </FramerWrapper>
       </div>
