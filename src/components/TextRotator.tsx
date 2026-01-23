@@ -16,10 +16,10 @@ function TextRotator() {
         >
           <li className="text-[#2f7df4]">Developer</li>
           <li className="text-[#2f7df4]">Researcher</li>
-          <li className="text-[#2f7df4]">Gamer</li>
+          <li className="text-[#2f7df4]">Programmer</li>
           <li className="text-[#2f7df4]">Learner</li>
           <li className="text-[#2f7df4]">Student</li>
-          <li className="text-[#2f7df4]">Contributer</li>
+          <li className="text-[#2f7df4]">AI Enthusiast</li>
         </ul>
       </span>
     </div>
