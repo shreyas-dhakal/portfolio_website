@@ -115,8 +115,8 @@ export default function RootLayout({
     bg-[repeating-linear-gradient(135deg,rgba(2,132,199,0.35)_0px,rgba(2,132,199,0.35)_1px,transparent_1px,transparent_10px)]
     mix-blend-screen
     opacity-70
-    [mask-image:radial-gradient(circle_at_top_left,black,transparent_70%)]
-    [-webkit-mask-image:radial-gradient(circle_at_top_left,black,transparent_70%)]
+    [mask-image:radial-gradient(circle_at_top_left,black,transparent_45%)]
+    [-webkit-mask-image:radial-gradient(circle_at_top_left,black,transparent_45%)]
 
   "
 />
