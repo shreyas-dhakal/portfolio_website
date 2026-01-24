@@ -35,7 +35,7 @@ const educationPage = () => {
               Master of Artificial Intelligence and Machine Learning <br /> Adelaide University, Australia
             </div>
             <p className=" font-poppins text-base w-full text-primary  max-sm:text-xs">
-              I am currently pursuing my Master&aposs degree in Artificial Intelligence and Machine Learning at the Adelaide University, Australia. This program is designed to equip me with advanced knowledge and skills in AI and ML, preparing me for a career in this rapidly evolving field.
+              I am currently pursuing my Master of Artificial Intelligence and Machine Learning at the Adelaide University, Australia. This program is designed to equip me with advanced knowledge and skills in AI and ML, preparing me for a career in this rapidly evolving field.
             </p>
           </FramerWrapper>
         </div>
