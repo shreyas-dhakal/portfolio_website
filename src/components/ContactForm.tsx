@@ -17,6 +17,7 @@ const ContactForm = () => {
               type="text"
               name="name"
               required
+              id="name"
               placeholder="Enter your name"
             />
           </div><div>
@@ -25,12 +26,14 @@ const ContactForm = () => {
               type="email"
               name="SenderEmail"
               required
+              id="email"
               placeholder="Enter your email"
             />
           </div><div>
             <Label htmlFor="message">Your Message</Label>
             <textarea
               placeholder="Your message here..."
+              id="message"
               name="message"
               required
               className=""

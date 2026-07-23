@@ -10,7 +10,6 @@ import {
   LightbulbIcon,
   Mail,
   MoreHorizontal,
- 
   User,
 } from 'lucide-react';
 
@@ -18,7 +17,6 @@ import { Dock, DockIcon, DockItem, DockLabel } from '@/components/animation/Dock
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import FramerWrapper from "./animation/FramerWrapper";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
@@ -26,59 +24,43 @@ const Navbar = () => {
   const data = [
     {
       title: 'Home',
-      icon: (
-        <HomeIcon className='h-full w-full ' />
-      ),
+       icon: <HomeIcon aria-hidden="true" />,
       href: '/',
     },
     {
       title: 'About',
-      icon: (
-        <User className='h-full w-full ' />
-      ),
+       icon: <User aria-hidden="true" />,
       href: '/about',
     },
     {
       title: 'Skills',
-      icon: (
-        <LightbulbIcon className='h-full w-full ' />
-      ),
+       icon: <LightbulbIcon aria-hidden="true" />,
       href: '/skills',
     },
     {
       title: 'Education',
-      icon: (
-        <GraduationCap className='h-full w-full ' />
-      ),
+       icon: <GraduationCap aria-hidden="true" />,
       href: '/education',
     },
     {
       title: 'Experience',
-      icon: (
-        <Briefcase className='h-full w-full ' />
-      ),
+       icon: <Briefcase aria-hidden="true" />,
       href: '/experience',
     },
     {
       title: 'Projects',
-      icon: (
-        <FolderGit2 className='h-full w-full ' />
-      ),
+       icon: <FolderGit2 aria-hidden="true" />,
       href: '/projects',
     },
    
     {
-      title: 'Contact Me',
-      icon: (
-        <Mail className='h-full w-full ' />
-      ),
+       title: 'Contact',
+       icon: <Mail aria-hidden="true" />,
       href: '/contact',
     },
     {
       title: 'More',
-      icon: (
-        <MoreHorizontal className='h-full w-full ' />
-      ),
+       icon: <MoreHorizontal aria-hidden="true" />,
       href: '/more',
     },
   ];
@@ -104,21 +86,34 @@ const Navbar = () => {
 
   return (
 
-    <div className={`fixed top-5 right-0 left-0 px-0 sm:px-5 m-auto w-full sm:w-fit bg-transparent z-[+9999999] ${scrolling ? "hidden":"block"}`}>
-    <Dock className='items-end pb-3 rounded-full !bg-[#15151b] !border-[#2d2d35]'>
+    <nav className={cn("nav-shell", scrolling && "nav-scrolled")} aria-label="Main navigation">
+      <div className="nav-frame">
+        <Link href="/" className="nav-brand" aria-label="Shreyas Dhakal, AI Engineer">
+          <span className="nav-brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M8 10.5 16 6l8 4.5v11L16 26l-8-4.5v-11Z" />
+              <path d="m8 10.5 8 4.5 8-4.5M16 15v11M11.5 8l9 5" />
+              <circle cx="16" cy="15" r="2.25" />
+            </svg>
+          </span>
+          <span className="nav-brand-copy"><strong>SD</strong><small>AI / ENGINEER</small></span>
+        </Link>
+        <span className="nav-status" aria-hidden="true"><i /> NODE_001 / ONLINE</span>
+      <Dock className='nav-dock' panelHeight={58} magnification={40} distance={1}>
       {data.map((item, idx) => (
-        <Link href={item.href} key={idx}>
+        <Link href={item.href} key={idx} aria-label={item.title} aria-current={pathname === item.href ? "page" : undefined}>
 
         <DockItem
-          className={cn("aspect-square rounded-full !bg-[#24242c] !border-[#34343d]",pathname === item.href && " !bg-[#b7ff00] !border-[#b7ff00]")}
+          className={cn("nav-item",pathname === item.href && "nav-item-active")}
           >
-          <DockLabel >{item.title}</DockLabel>
-          <DockIcon className={cn(pathname === item.href ? "!text-[#0d0d11]" : "!text-[#aaaab2]")}>{item.icon}</DockIcon>
+          <DockLabel className="nav-label"><span>/{String(idx + 1).padStart(2, "0")}</span> {item.title}</DockLabel>
+          <DockIcon className="nav-icon">{item.icon}</DockIcon>
         </DockItem>
           </Link>
       ))}
     </Dock>
-    </div>
+      </div>
+    </nav>
   );
 };
 

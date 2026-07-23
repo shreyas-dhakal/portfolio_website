@@ -1,8 +1,9 @@
 
 
 import SocialLinks from "@/components/SocialLinks";
+import InteractiveOrbitalStage from "@/components/animation/InteractiveOrbitalStage";
 import Link from "next/link";
-import { ArrowUpRight, BrainCircuit, GitBranch, Radio, Sparkles } from "lucide-react";
+import { ArrowUpRight, GitBranch, Radio, Sparkles } from "lucide-react";
 
 export const siteConfig = {
   name: "Shreyas Dhakal",
@@ -13,10 +14,10 @@ export const siteConfig = {
 export default function Home() {
   return (
     <div className="home-shell">
-      <div className="home-kicker"><span className="pulse-dot" /> AVAILABLE FOR SELECT BUILDS <span className="kicker-line" /> 27.7172° N, 85.3240° E</div>
+       <div className="home-kicker reveal reveal-1"><span className="pulse-dot" /> AVAILABLE FOR SELECT BUILDS <span className="kicker-line" /> 27.7172° N, 85.3240° E</div>
 
       <section className="hero-grid">
-        <div className="hero-copy">
+         <div className="hero-copy reveal reveal-2">
           <p className="eyebrow"><span>01</span> / INTRODUCTION</p>
           <h1>Shreyas<br /><em>Dhakal</em><span className="period">.</span></h1>
           <div className="role-line"><span className="role-mark">AI</span><span>Engineer building systems<br />that think in public.</span></div>
@@ -28,20 +29,14 @@ export default function Home() {
           <div className="social-row"><SocialLinks /><span className="social-note">Say hello <span>→</span></span></div>
         </div>
 
-        <div className="hero-visual">
+         <div className="hero-visual reveal reveal-3">
           <div className="visual-topline"><span>SHREYAS.D / NODE_001</span><span className="live-label"><Radio size={12} /> LIVE SIGNAL</span></div>
-          <div className="orbital-stage">
-            <div className="orbit orbit-one" /><div className="orbit orbit-two" /><div className="orbit orbit-three" />
-            <div className="core"><BrainCircuit size={72} strokeWidth={1.1} /><span>INTELLIGENCE<br />IN MOTION</span></div>
-            <div className="orbit-label label-one">VISION<br /><b>98.4%</b></div>
-            <div className="orbit-label label-two">LATENCY<br /><b>12ms</b></div>
-            <div className="orbit-label label-three">BUILD<br /><b>ACTIVE</b></div>
-          </div>
+           <InteractiveOrbitalStage />
           <div className="visual-footer"><span>MODEL / HUMAN + MACHINE</span><span>SCROLL TO DECODE ↓</span></div>
         </div>
       </section>
 
-      <section className="signal-grid">
+       <section className="signal-grid reveal reveal-4">
         <div className="signal-card feature-card"><div className="card-number">[ 001 ]</div><div><Sparkles size={19} /><p>Featured build</p><h2>Smart Parking<br /><span>Management System</span></h2><span className="card-link">Computer vision / Python <ArrowUpRight size={15} /></span></div></div>
         <div className="signal-card stat-card"><div className="card-number">[ STACK ]</div><div className="stat-list"><div><span>01</span> Python <b>●</b></div><div><span>02</span> TensorFlow <b>●</b></div><div><span>03</span> Computer Vision <b>●</b></div><div><span>04</span> React / Next.js <b>●</b></div></div><Link href="/skills" className="card-link">View full stack <ArrowUpRight size={15} /></Link></div>
         <div className="signal-card quote-card"><GitBranch size={20} /><p>“The best interface<br />is a useful idea.”</p><span>— SYSTEM NOTE 04</span></div>

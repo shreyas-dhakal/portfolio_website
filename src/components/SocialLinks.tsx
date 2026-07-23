@@ -18,7 +18,7 @@ const SocialLinks = () => {
         return (
           <FramerWrapper key={indx} delay={timing} y={50}>
 
-          <Link  target="blank"
+          <Link target="_blank" rel="noopener noreferrer" aria-label={`Open ${itm.name}`}
             href={itm.link}
             className={cn(buttonVariants({ variant: "outline", size: "icon" }))}
             >{itm.icon}</Link>
