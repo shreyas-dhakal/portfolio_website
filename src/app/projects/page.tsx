@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 const projects: { title: string; description: string; tags: string[]; link: string }[] = [
+  { title: "AI Resume Tailor", description: "An intelligent, agentic system that scrapes job descriptions and refines resumes to be ATS-optimized using LangGraph, Firecrawl, and Azure OpenAI.", tags: ["Python", "LangGraph","OpenAI"], link: "https://github.com/shreyas-dhakal/resume_tailor_langgraph" },
   { title: "Smart Parking Management System", description: "Computer vision system for parking occupancy detection and number plate recognition.", tags: ["Python", "Computer Vision"], link: "https://github.com/shreyas-dhakal/smart_parking_management_system" },
   { title: "Reinforcement Learning NPC", description: "A multi-agent reinforcement learning model operating inside a simulated 3D environment.", tags: ["Unity", "TensorFlow", "RL"], link: "https://drive.google.com/file/d/1_-NQIMSCTxlxbsM5z25tGY6Fn5eaOhVF/view?usp=sharing" },
   { title: "Dirghayu Hospital", description: "A full-stack hospital website taken from conception through deployment.", tags: ["PHP", "Laravel", "MySQL"], link: "https://hospitaldirghayu.com/" },

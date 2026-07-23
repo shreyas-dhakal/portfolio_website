@@ -1,4 +1,6 @@
 const entries = [
+  ["04.2026 — Present", "Research Scholar - Conversational Agents in Water Engineering", 
+    "Adelaide University", "Implementing the concept of LLM negotiation agents against NSGA-II optimization for water resource allocation using Langchain and multi-agent collaboration systems."],
   ["02.2025 — 08.2025", "AI Engineer", "xval.ai", "Researched methods for generating educational content with Generative AI and LLMs. Built RAG systems, vector databases, AI scripts, and text evaluation frameworks."],
   ["07.2024 — 12.2024", "Full Stack Web Developer", "Code Craft Web Solution", "Built and deployed a hospital website with PHP and Laravel, working across frontend, backend, server deployment, and client interaction."],
   ["05.2023 — 11.2023", "Machine Learning Intern", "SMTM Capital", "Researched, developed, and implemented machine learning models for technical analysis of financial data and collaborated on AI-powered trading strategies."],
