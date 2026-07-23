@@ -1,66 +1,13 @@
-import FramerWrapper from "@/components/animation/FramerWrapper";
-import Heading from "@/components/Heading";
-import ProjectCards from "@/components/ProjectsCard";
-import { Badge } from "@/components/ui/badge";
-import { Layers } from "lucide-react";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
-const projectsPage = () => {
-  // PROJECTS DATA
-  const Projects = [
-    {
-      title: "Smart Parking Management System ",
-      description:
-        `SMPS is a system using computer vision and other machine learning techniques to identify parking occupancy and numberplate recognition.`,
-      tags: ["Python", "Computer Vision"],
-      link: "https://github.com/shreyas-dhakal/smart_parking_management_system",
-    },
-    {
-      title: "Reinforced Learning NPC Model for 3D Environment",
-      description:
-        "Reinforced Learning NPC Model for 3D Environment is a machine learning based project that showcases use of reinforcement learning for multiagents in a simulated environment.",
-      tags: ["Unity", "Tensorflow", "Reinforcement Learning"],
-      link: "https://drive.google.com/file/d/1_-NQIMSCTxlxbsM5z25tGY6Fn5eaOhVF/view?usp=sharing",
-    },
-    {
-      title: "Dirghayu Hospital",
-      description:
-        "Full stack website created using PHP and Laravel.",
-      tags: ["PHP", "Laravel", "MySql","Apache"],
-      link: "https://hospitaldirghayu.com/",
-    },
-    {
-      title: "Baagchaal",
-      description:
-        "Basic C programming based Baagchaal Game",
-      tags: ["C"],
-      link: "https://drive.google.com/drive/folders/1vLILy0j6TXGFblW4qq4JU78qj0NKqHzE?usp=sharing",
-    },
-  ];
+const projects: { title: string; description: string; tags: string[]; link: string }[] = [
+  { title: "Smart Parking Management System", description: "Computer vision system for parking occupancy detection and number plate recognition.", tags: ["Python", "Computer Vision"], link: "https://github.com/shreyas-dhakal/smart_parking_management_system" },
+  { title: "Reinforcement Learning NPC", description: "A multi-agent reinforcement learning model operating inside a simulated 3D environment.", tags: ["Unity", "TensorFlow", "RL"], link: "https://drive.google.com/file/d/1_-NQIMSCTxlxbsM5z25tGY6Fn5eaOhVF/view?usp=sharing" },
+  { title: "Dirghayu Hospital", description: "A full-stack hospital website taken from conception through deployment.", tags: ["PHP", "Laravel", "MySQL"], link: "https://hospitaldirghayu.com/" },
+  { title: "Baagchaal", description: "A classic Nepali board game implemented with the fundamentals of C programming.", tags: ["C", "Game Logic"], link: "https://drive.google.com/drive/folders/1vLILy0j6TXGFblW4qq4JU78qj0NKqHzE?usp=sharing" },
+];
 
-  return (
-    // PROJECT PAGE
-    <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
-      <Badge variant="secondary" className="gap-1.5 py-1 ">
-        <Layers className="h-4 w-4" />
-        Projects
-      </Badge>
-      <div className="flex flex-col gap-3">
-        <Heading>My Projects</Heading>
-        <FramerWrapper y={0} x={200}>
-          <p className=" font-poppins text-lg w-full text-primary max-sm:text-base">
-            I love to Build Cool Projects. Here, you&#x27;ll find a curated
-            collection of my projects.
-          </p>
-        </FramerWrapper>
-      </div>
-
-      <div className=" w-full flex flex-row flex-wrap gap-3 max-lg:flex-col">
-        {Projects.map((val, indx) => {
-          return <ProjectCards key={indx} value={val} num={indx} />;
-        })}
-      </div>
-    </div>
-  );
-};
-
-export default projectsPage;
+export default function ProjectsPage() {
+  return <div className="signal-page"><header className="signal-page-header"><div><p className="signal-page-kicker"><span>05</span> / THE LAB</p><h1 className="signal-page-title">Things I<br /><em>made.</em></h1></div><p className="signal-page-intro">Small experiments and serious systems. A curated archive of the things I built to understand a problem better.</p></header><div className="project-grid">{projects.map((project, index) => <article className="signal-panel project-tile" key={project.title}><div><span className="panel-label">[ 00{index + 1} ]</span><h2>{project.title}</h2><p>{project.description}</p></div><div className="project-meta"><div className="tag-row">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div><Link href={project.link} target="_blank" rel="noopener noreferrer">OPEN <ArrowUpRight size={15} /></Link></div></article>)}</div></div>;
+}

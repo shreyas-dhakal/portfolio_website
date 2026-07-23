@@ -1,64 +1,16 @@
-import Aboutfooter from "@/components/Aboutfooter";
-import FramerWrapper from "@/components/animation/FramerWrapper";
-import Heading from "@/components/Heading";
-import { Badge } from "@/components/ui/badge";
-import { Circle, Heart, User2 } from "lucide-react";
-const page = () => {
-  const items = [
-    { hobby: "Coding" },
-    { hobby: "Reading Books" },
-    { hobby: "Playing Games" },
-    { hobby: "Working Out" },
-    { hobby: "Listening to Music" },
-  ];
+import { Heart, ArrowUpRight } from "lucide-react";
 
-  return (
-    // ABOUT PAGE
-    <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
-      <Badge variant="secondary" className="gap-1.5 py-1 ">
-        <User2 className="h-4 w-4" />
-        About me
-      </Badge>
-      <div className="flex flex-col gap-5">
-        <Heading>
-          AI Engineer <br /> From Nepal
-        </Heading>
+const facts = [["LANGUAGE", "English / Nepali"], ["NATIONALITY", "Nepal"], ["LOCATION", "Adelaide, AU"]];
+const hobbies = ["Coding", "Reading books", "Playing games", "Working out", "Listening to music"];
 
-        <FramerWrapper y={0} x={100}>
-          <p className=" font-poppins text-xl w-full text-primary max-sm:text-lg ">
-            I am an AI Engineer, originally from Nepal and currently living in Adelaide, Australia. I&apos;m passionate about research and
-            doing AI-based projects. I specialize in AI Agents and machine learning frameworks focusing in LLMs. Filled with insane drive and passion, I am eager to contribute and explore in fields of implications of Artificial Intelligence in the real world.
-          </p>
-        </FramerWrapper>
-      </div>
-      <FramerWrapper
-        className="w-full flex flex-row justify-between max-lg:flex-col "
-        y={100}
-        delay={0.3}
-      >
-        <Aboutfooter />
-        
-      </FramerWrapper>
-      <FramerWrapper className="block" y={100} delay={0.31}>
-        <h1 className="gap-2 text-3xl font-poppins text-primary font-semibold flex icon_underline relative max-sm:text-2xl">
-          {" "}
-          <Heart className="h-8 w-8" /> Hobbies
-        </h1>
-        <div className="w-full h-fit p-2 flex flex-row justify-between gap-7 max-lg:flex-col">
-          {items.map((val, indx) => {
-            return (
-              <div
-                key={indx}
-                className="flex gap-2 justify-center items-center flex-row text-xl text-primary pt-3 max-lg:justify-start "
-              >
-                <Circle className="h-3 w-3" /> {val.hobby}
-              </div>
-            );
-          })}
-        </div>
-      </FramerWrapper>
+export default function AboutPage() {
+  return <div className="signal-page">
+    <header className="signal-page-header"><div><p className="signal-page-kicker"><span>02</span> / PROFILE</p><h1 className="signal-page-title">The human<br /><em>behind</em> the model.</h1></div><p className="signal-page-intro">A builder from Nepal, currently based in Adelaide. I like difficult problems, useful interfaces, and ideas that survive contact with reality.</p></header>
+    <div className="about-layout">
+      <section className="signal-panel about-story"><span className="panel-label">[ SYSTEM NOTE / 001 ]</span><p className="signal-copy" style={{marginTop:"2.5rem"}}>I am an AI Engineer passionate about research and <strong>AI-based products</strong>. My work lives at the intersection of machine learning, agents, and the web: translating complex systems into tools people can actually use.</p><p className="signal-copy">Currently focused on LLM applications, intelligent agents, and the practical implications of artificial intelligence in the real world.</p></section>
+      <div className="data-stack">{facts.map(([label, value]) => <div className="signal-panel data-tile" key={label}><span className="data-label">{label}</span><span className="data-value"><b>+</b> {value}</span></div>)}<a className="signal-panel data-tile" href="/resume.pdf" target="_blank"><span className="data-label">DOCUMENT / CV</span><span className="data-value">Open resume <ArrowUpRight size={18} /></span></a></div>
     </div>
-  );
-};
-
-export default page;
+    <div className="section-rule"><Heart size={14} /> Off-screen interests</div>
+    <div className="hobby-grid">{hobbies.map((hobby, index) => <div className="hobby-item" key={hobby}><b>0{index + 1}</b>{hobby}</div>)}</div>
+  </div>;
+}

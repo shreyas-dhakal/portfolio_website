@@ -1,70 +1,8 @@
-import FramerWrapper from "@/components/animation/FramerWrapper";
-import Heading from "@/components/Heading";
-import { Badge } from "@/components/ui/badge";
-import { Briefcase } from "lucide-react";
+const entries = [
+  ["02.2026 — NOW", "Master of Artificial Intelligence and Machine Learning", "Adelaide University, Australia", "Advanced study in AI and ML, building the research foundation for a career in intelligent systems."],
+  ["11.2019 — 07.2024", "Bachelor of Computer Engineering", "Khwopa College of Engineering / Tribhuvan University, Nepal", "A broad engineering foundation across hardware, software, systems, and the fundamentals that make computers useful."],
+];
 
-const educationPage = () => {
-  return (
-    // ABOUT PAGE
-    <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
-      <Badge variant="secondary" className="gap-1.5 py-1 ">
-        <Briefcase className="h-4 w-4" />
-        Education
-      </Badge>
-      <div className="flex flex-col gap-3">
-        <Heading>My Education</Heading>
-      </div>
-      <div className="w-full h-fit flex flex-col">
-        
-        <div className="w-full h-fit flex">
-          <FramerWrapper
-            y={0}
-            x={-100}
-            delay={0.35}
-            className="w-1/4 font-rubik flex items-center justify-evenly text-lg max-sm:text-base "
-          >
-            February 2026 - Present
-          </FramerWrapper>
-          <FramerWrapper
-            y={0}
-            x={100}
-            delay={0.35}
-            className="relative w-3/4 border-l-4 border-l-[#3c3c3c] p-4 gap-3 education_point "
-          >
-            <div className="text-2xl font-rubik max-sm:text-xl">
-              Master of Artificial Intelligence and Machine Learning <br /> Adelaide University, Australia
-            </div>
-            <p className=" font-poppins text-base w-full text-primary  max-sm:text-xs">
-              I am currently pursuing Master of Artificial Intelligence and Machine Learning at the Adelaide University, Australia. This program is designed to equip me with advanced knowledge and skills in AI and ML, preparing me for a career in this rapidly evolving field.
-            </p>
-          </FramerWrapper>
-        </div>
-        <div className="w-full h-fit flex">
-          <FramerWrapper
-            y={0}
-            x={-100}
-            delay={0.35}
-            className="w-1/4 font-rubik flex items-center justify-evenly text-lg max-sm:text-base "
-          >
-            November 2019 - July 2024
-          </FramerWrapper>
-          <FramerWrapper
-            y={0}
-            x={100}
-            delay={0.35}
-            className="relative w-3/4 border-l-4 border-l-[#3c3c3c] p-4 gap-3 education_point "
-          >
-            <div className="text-2xl font-rubik max-sm:text-xl">
-              Bachelor of Computer Engineering, <br /> Tribhuvan University, Nepal
-            </div>
-            <p className=" font-poppins text-base w-full text-primary  max-sm:text-xs">
-              I am a registered Computer Engineer. I have an undergraduate degree in Computer Engineering from Khwopa College of Engineering, Tribhuvan University. I have comprehensive knowledge of both hardware and software aspects of computers. 
-            </p>
-          </FramerWrapper>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default educationPage;
+export default function EducationPage() {
+  return <div className="signal-page"><header className="signal-page-header"><div><p className="signal-page-kicker"><span>03</span> / TRANSMISSION LOG</p><h1 className="signal-page-title">Where the<br /><em>signal</em> started.</h1></div><p className="signal-page-intro">The education layer behind the experiments: engineering fundamentals, machine learning theory, and an ongoing curiosity for what comes next.</p></header><div className="timeline">{entries.map(([date, title, school, description]) => <article className="timeline-item" key={title}><div className="timeline-date">{date}</div><div className="timeline-content"><h2>{title}</h2><p style={{color:"#b7ff00", marginBottom:".75rem"}}>{school}</p><p>{description}</p></div></article>)}</div></div>;
+}
