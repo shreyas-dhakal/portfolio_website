@@ -71,18 +71,18 @@ export default function RootLayout({
       <body className={`${poppins.variable} ${rubik.variable}`}>
 <main
   className={cn(
-    "relative flex min-h-screen h-dvh items-center justify-between pt-14 pb-4 px-40 max-md:px-6 max-sm:pt-20 overflow-hidden"
+    "site-shell relative flex min-h-screen items-center justify-between pt-24 pb-8 px-16 max-lg:px-8 max-sm:px-5 overflow-hidden"
   )}
 >
   {/* Animated background */}
 <div className="absolute inset-0 -z-10 pointer-events-none">
-  {/* Top-left */}
+      {/* ambient color field */}
   <div
     className="
       absolute inset-0
       animate-[glow_4s_ease-in-out_infinite]
       [animation-delay:-2s]
-      bg-[radial-gradient(circle_at_20%_20%,rgba(2,132,199,0.30),transparent_100%)]
+       bg-[radial-gradient(circle_at_20%_20%,rgba(183,255,0,0.10),transparent_55%)]
     "
   />
 
@@ -92,7 +92,7 @@ export default function RootLayout({
       absolute inset-0
       animate-[glow_8s_ease-in-out_infinite]
       [animation-delay:-6s]
-      bg-[radial-gradient(circle_at_80%_30%,rgba(2,132,199,0.20),transparent_80%)]
+       bg-[radial-gradient(circle_at_80%_30%,rgba(31,62,255,0.16),transparent_65%)]
     "
   />
 
@@ -102,7 +102,7 @@ export default function RootLayout({
       absolute inset-0
       animate-[glow_12s_ease-in-out_infinite]
       [animation-delay:-10s]
-      bg-[radial-gradient(circle_at_50%_80%,rgba(2,132,199,0.14),transparent_50%)]
+       bg-[radial-gradient(circle_at_50%_80%,rgba(183,255,0,0.07),transparent_50%)]
     "
   />
 </div>
@@ -112,7 +112,7 @@ export default function RootLayout({
 <div
   className="
     absolute top-0 left-0 w-[40rem] h-[40rem]
-    bg-[repeating-linear-gradient(135deg,rgba(2,132,199,0.35)_0px,rgba(2,132,199,0.35)_1px,transparent_1px,transparent_10px)]
+     bg-[repeating-linear-gradient(135deg,rgba(183,255,0,0.12)_0px,rgba(183,255,0,0.12)_1px,transparent_1px,transparent_10px)]
     mix-blend-screen
     opacity-70
     [mask-image:radial-gradient(circle_at_top_left,black,transparent_45%)]
@@ -124,7 +124,7 @@ export default function RootLayout({
 <div
   className="
     absolute bottom-0 right-0 w-[40rem] h-[40rem]
-    bg-[repeating-linear-gradient(135deg,rgba(2,132,199,0.25)_0px,rgba(2,132,199,0.25)_1px,transparent_1px,transparent_12px)]
+     bg-[repeating-linear-gradient(135deg,rgba(183,255,0,0.08)_0px,rgba(183,255,0,0.08)_1px,transparent_1px,transparent_12px)]
     mix-blend-screen
     opacity-60
     [mask-image:radial-gradient(circle_at_bottom_right,black,transparent_70%)]
