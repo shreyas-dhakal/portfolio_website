@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080f17">
+<title>Shreyas Dhakal</title>
+<meta name="description" content="Shreyas Dhakal — portfolio, social profiles and résumé.">
+<style>
+@font-face{font-family:Inter;src:url('/assets/inter-semibold.ttf') format('truetype');font-weight:600;font-style:normal;font-display:swap}
+:root{color-scheme:dark;background:#080f17}
+:root[data-theme="light"]{color-scheme:light;background:#f2f1e9}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
+canvas{position:fixed;inset:0;display:block;width:100%;height:100%}
+#theme-toggle{position:fixed;top:20px;right:24px;z-index:3;display:grid;place-items:center;width:44px;height:44px;padding:10px;border:0;border-radius:50%;background:#080f17;color:#b8d4d9;cursor:pointer}
+:root[data-theme="light"] #theme-toggle{background:#f2f1e9;color:#385961}
+#theme-toggle:hover{background:#1b2c35}:root[data-theme="light"] #theme-toggle:hover{background:#e0e5df}
+#theme-toggle:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+#theme-toggle svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:600px){#theme-toggle{top:12px;right:12px}}
+#name{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;gap:0;margin:0;padding:24px;z-index:1;pointer-events:none;font-family:Inter,Arial,sans-serif;font-size:clamp(32px,8vw,112px);font-weight:600;letter-spacing:-.035em;line-height:1.15;color:#a8b9c1;white-space:nowrap}
+:root[data-theme="light"] #name{color:#586e79}
+#name span{display:inline-block;animation:name-blur-up .4s cubic-bezier(.16,1,.3,1) both}
+#name span{animation-delay:calc(var(--i)*.035s)}
+#name .name-space{width:.24em}
+@keyframes name-blur-up{from{opacity:0;filter:blur(10px);transform:translateY(20px)}to{opacity:1;filter:blur(0);transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){#name span{animation:none}}
+#profile-links{position:fixed;top:calc(50% + clamp(18px,4.6vw,64px) + 20px);left:0;right:0;z-index:2;display:flex;align-items:center;justify-content:center;gap:16px;padding:0 16px;color:#b8c6cb}
+#profile-links a{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;border-radius:50%;background:transparent;color:inherit;text-decoration:none;transition:color .2s ease,background-color .2s ease,transform .2s ease}
+#profile-links svg{width:19px;height:19px;flex-shrink:0}
+#profile-links a:hover{color:#f2f1e9;background:rgba(184,212,217,.07);transform:translateY(-2px)}
+#profile-links a:focus-visible{outline:1px solid currentColor;outline-offset:3px}
+:root[data-theme="light"] #profile-links{color:#435d66}
+:root[data-theme="light"] #profile-links a:hover{color:#080f17;background:rgba(56,89,97,.07)}
+@media(prefers-reduced-motion:reduce){#profile-links a{transition:none}#profile-links a:hover{transform:none}}
+</style>
+</head>
+<body>
+<canvas id="sea" role="img" aria-label="Pixel jellyfish gently pulsing through a sea of faint symbols."></canvas>
+<h1 id="name" aria-label="Shreyas Dhakal"><span aria-hidden="true" style="--i:0">S</span><span aria-hidden="true" style="--i:1">h</span><span aria-hidden="true" style="--i:2">r</span><span aria-hidden="true" style="--i:3">e</span><span aria-hidden="true" style="--i:4">y</span><span aria-hidden="true" style="--i:5">a</span><span aria-hidden="true" style="--i:6">s</span><span aria-hidden="true" style="--i:7" class="name-space">&#160;</span><span aria-hidden="true" style="--i:8">D</span><span aria-hidden="true" style="--i:9">h</span><span aria-hidden="true" style="--i:10">a</span><span aria-hidden="true" style="--i:11">k</span><span aria-hidden="true" style="--i:12">a</span><span aria-hidden="true" style="--i:13">l</span></h1>
+<nav id="profile-links" aria-label="Social profiles and résumé">
+<a id="linkedin-link" aria-label="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/shreyas-dhakal-50bbb9275/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 8.5H3V21h3.5zM4.75 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4M21 13.7c0-3.4-1.8-5-4.2-5a3.6 3.6 0 0 0-3.2 1.7V8.5H10V21h3.6v-6.8c0-1.8.8-2.7 2-2.7 1.3 0 1.8.9 1.8 2.7V21H21z"/></svg></a>
+<a id="x-link" aria-label="X" title="X" href="https://x.com/ei77ge_" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.5 5.4 22H2.2l8.3-9.6L.8 2h6.5l4.5 6.8L18.9 2Zm-1.1 18h1.7L6.3 4H4.5L17.8 20Z"/></svg></a>
+<a id="email-link" aria-label="Email" title="Email" href="mailto:dhakalshreyas2@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></a>
+<a id="github-link" aria-label="GitHub" title="GitHub" href="https://github.com/shreyas-dhakal" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.64 1.22 3.28.93.1-.73.4-1.22.72-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.63 0c2.15-1.45 3.1-1.15 3.1-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.8 1.16 3.02 0 4.32-2.63 5.28-5.14 5.56.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z"/></svg></a>
+<a id="resume-link" class="resume" aria-label="Download résumé" title="Download résumé" href="/assets/resume.pdf" download="Shreyas-Dhakal-Resume.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M5 16v5h14v-5"/></svg></a>
+</nav>
+<button id="theme-toggle" type="button" aria-label="Switch to light theme">
+<svg id="theme-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+<defs>
+<mask id="theme-bite" maskUnits="userSpaceOnUse" x="-8" y="-8" width="40" height="40"><rect x="-8" y="-8" width="40" height="40" fill="white" stroke="none"/><circle id="theme-shadow-mask" cx="30" cy="-6" r="6.5" fill="black" stroke="none"/></mask>
+<clipPath id="theme-disc-clip"><circle id="theme-clip-circle" cx="12" cy="12" r="4.5"/></clipPath>
+</defs>
+<circle id="theme-disc" cx="12" cy="12" r="4.5" mask="url(#theme-bite)"/>
+<circle id="theme-shadow-edge" cx="30" cy="-6" r="6.5" clip-path="url(#theme-disc-clip)"/>
+<g id="theme-rays"><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></g>
+</svg>
+</button>
+<script>
+
+'use strict';
+const canvas=document.getElementById('sea'),ctx=canvas.getContext('2d',{alpha:false}),field=document.createElement('canvas'),ink=field.getContext('2d',{willReadFrequently:true});
+// Magic UI TextAnimate blurInUp: character segments, 10px blur, 20px rise,
+// and staggered entrance; adapted to CSS for the standalone page.
+const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+let w=0,h=0,cell=7,cols=0,rows=0,dpr=1,time=0,last=0,paused=reduced.matches,light=false,jellies=[],raf=0;
+const colors={dark:[[[158,170,204],[128,179,207],[128,191,183]],[[146,180,200],[132,186,186],[169,164,197]]],light:[[[100,105,145],[63,115,148],[61,130,124]],[[76,114,140],[57,125,126],[119,101,143]]]};
+const appearance=matchMedia('(prefers-color-scheme: light)');
+let themeOverride=null;
+try{themeOverride=localStorage.getItem('jellyfish-theme');}catch{}
+light=themeOverride==='light'||(themeOverride!=='dark'&&appearance.matches);
+const themeToggle=document.getElementById('theme-toggle');
+const random=(a,b)=>a+Math.random()*(b-a),tau=Math.PI*2;
+function seed(){jellies=[];const layout=w<600?[[.67,.22,.85],[.19,.52,.53],[.8,.72,.48],[.24,.08,.43]]:[[.67,.29,1],[.34,.2,.66],[.88,.62,.7],[.47,.73,.49],[.11,.23,.5],[.9,.08,.38]];const base=Math.min(w*.20125,h*.273125,223);layout.forEach(([x,y,size],i)=>jellies.push({x:x*w,y:y*h,r:Math.max(40,base*size),phase:i*1.71,angle:random(-.22,.22),vx:0,vy:0,rate:random(1.4,2.1),depth:random(.72,1),color:i%2}));}
+function resize(){w=innerWidth;h=innerHeight;dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);cell=w<600?8:11;cols=Math.ceil(w/cell);rows=Math.ceil(h/cell);field.width=cols;field.height=rows;ctx.setTransform(dpr,0,0,dpr,0,0);seed();render();}
+function jelly(j){const phase=time*j.rate+j.phase,pulse=(Math.sin(phase)+1)/2,rx=j.r*(1-.23*pulse),ry=j.r*(.53+.25*pulse),c=colors[light?"light":"dark"][j.color];const color=(a,t=.5)=>{const v=Math.max(0,Math.min(1,t))*2,k=Math.min(1,Math.floor(v)),f=v-k,rgb=c[k].map((value,index)=>Math.round(value+(c[k+1][index]-value)*f));return `rgba(${rgb[0]},${rgb[1]},${rgb[2]},${a})`;};
+ink.save();ink.translate(j.x/cell,j.y/cell);ink.rotate(j.angle);ink.scale(1/cell,1/cell);
+// Muted colour shifts follow the bell and fade through the trailing strands.
+const wash=(alpha)=>{const gradient=ink.createLinearGradient(-rx*.45,-ry,rx*.35,j.r*2.2);gradient.addColorStop(0,color(alpha,0));gradient.addColorStop(.38,color(alpha,.5));gradient.addColorStop(1,color(alpha,1));return gradient;};
+// Fine tentacles trail the bell. Each strand has its own frequency and lag.
+for(let n=0;n<29;n++){const u=(n/28)*2-1,len=j.r*(1.1+1.15*(1-Math.abs(u))+.3*Math.sin(n*8)),root=u*rx*.86;ink.beginPath();for(let k=0;k<=40;k++){const f=k/40,y=ry*.23+len*f,x=root*(1-.2*f)+Math.sin(f*5-time*1.3+j.phase+n*.55)*j.r*.14*f+Math.sin(f*11-time*.8+n)*j.r*.065*f; if(!k)ink.moveTo(x,y);else ink.lineTo(x,y);}ink.strokeStyle=wash(n%3===0?.52:.27);ink.lineWidth=n%3===0?4:2.2;ink.stroke();}
+// Six folded oral arms form brighter, soft ribbons inside the fine strands.
+for(let n=0;n<6;n++){ink.beginPath();let root=(n-2.5)*rx*.19;for(let k=0;k<=34;k++){let f=k/34,x=root+Math.sin(f*8-time*1.5+n+j.phase)*j.r*.18*f,y=ry*.18+f*j.r*(1.6+.13*Math.sin(n));k?ink.lineTo(x,y):ink.moveTo(x,y);}ink.strokeStyle=wash(.24);ink.lineWidth=j.r*.055;ink.stroke();ink.strokeStyle=wash(.5);ink.lineWidth=1.4;ink.stroke();}
+// A translucent bell with a scalloped skirt and curved radial ribs.
+ink.beginPath();ink.moveTo(-rx,ry*.17);ink.bezierCurveTo(-rx*.95,-ry*.65,-rx*.49,-ry,0,-ry);ink.bezierCurveTo(rx*.49,-ry,rx*.95,-ry*.65,rx,ry*.17);for(let k=48;k>=0;k--){let u=k/48*2-1;ink.lineTo(u*rx,ry*(.2+.08*Math.cos(u*10*Math.PI)));}ink.closePath();const bellShade=ink.createLinearGradient(0,-ry,0,ry*.3);bellShade.addColorStop(0,color(.3,0));bellShade.addColorStop(.45,color(.5,.35));bellShade.addColorStop(1,color(.32,.7));ink.fillStyle=bellShade;ink.fill();ink.strokeStyle=color(.65);ink.lineWidth=2;ink.stroke();
+for(let n=-8;n<=8;n++){let u=n/8;ink.beginPath();ink.moveTo(0,-ry*.93);ink.bezierCurveTo(u*rx*.52,-ry*.7,u*rx*.94,-ry*.25,u*rx*.94,ry*.19);ink.strokeStyle=color(.28+.17*(1-Math.abs(u)));ink.lineWidth=2.6;ink.stroke();}
+ink.beginPath();ink.ellipse(0,ry*.15,rx*.95,ry*.14,0,0,tau);ink.strokeStyle=color(.74);ink.lineWidth=3;ink.stroke();
+// Nested translucent arcs reveal the bell's curved internal structure.
+for(let layer=0;layer<3;layer++){const v=.36+layer*.19;ink.beginPath();ink.moveTo(-rx*v,-ry*(1-v));ink.bezierCurveTo(-rx*v*.55,-ry*(1-v)-ry*.19,rx*v*.55,-ry*(1-v)-ry*.19,rx*v,-ry*(1-v));ink.strokeStyle=color(.18+layer*.035);ink.lineWidth=1.8;ink.stroke();}
+// Inner rim and small rim organs add structure at the larger scale.
+ink.beginPath();ink.ellipse(0,ry*.11,rx*.86,ry*.1,0,0,tau);ink.strokeStyle=color(.4);ink.lineWidth=2;ink.stroke();
+for(let n=0;n<21;n++){const u=n/20*2-1;ink.beginPath();ink.arc(u*rx*.9,ry*(.18+.06*Math.cos(u*10*Math.PI)),Math.max(2,j.r*.017),0,tau);ink.fillStyle=color(.78);ink.fill();}
+// Luminous central organs, visible through the bell.
+for(let n=0;n<4;n++){let a=n*tau/4+Math.PI/4;ink.beginPath();ink.ellipse(Math.cos(a)*rx*.19,-ry*.26+Math.sin(a)*ry*.18,rx*.13,ry*.14,a,0,tau);ink.fillStyle=color(.12);ink.fill();ink.strokeStyle=color(.65);ink.lineWidth=3;ink.stroke();}ink.restore();}
+// Stable scattered particles, with a few tiny symbols suspended between them.
+function drawWater(){const count=Math.max(28,Math.min(180,Math.round(w*h/7000))),marks=['.',':','+','~','·'];ctx.font='8px ui-monospace,Menlo,Consolas,monospace';ctx.textAlign='center';ctx.textBaseline='middle';
+for(let i=0;i<count;i++){const nx=((i+1)*.61803398875)%1,ny=((i+1)*.75487766625)%1,depth=.4+(i%7)/10;
+const x=((nx*w+Math.sin(time*.055+i*2.3)*9+time*.32*depth)%w+w)%w,y=((ny*h-time*depth*1.8)%h+h)%h;
+const shimmer=.88+.12*Math.sin(time*.35+i),alpha=(i%4===0?.27:.19)*shimmer;ctx.fillStyle=light?`rgba(51,96,107,${alpha})`:`rgba(133,188,198,${alpha})`;
+if(i%3===0)ctx.fillText(marks[Math.floor(i/3)%marks.length],Math.round(x),Math.round(y));else{const size=i%7===0?2:1;ctx.fillRect(Math.round(x),Math.round(y),size,size);if(i%11===0){ctx.globalAlpha=.55;ctx.fillRect(Math.round(x)+4,Math.round(y)-3,1,1);ctx.globalAlpha=1;}}}}
+function render(){ctx.fillStyle=light?'#f2f1e9':'#080f17';ctx.fillRect(0,0,w,h);drawWater();ink.clearRect(0,0,cols,rows);jellies.forEach(jelly);const pixels=ink.getImageData(0,0,cols,rows).data;
+// Keep the coloured pixel tiles and overlay density-matched ASCII glyphs.
+ctx.font=`${cell-1}px ui-monospace,Menlo,Consolas,monospace`;ctx.textAlign="center";ctx.textBaseline="middle";const glyphs=".:+x%#@";
+for(let y=0;y<rows;y++){for(let x=0;x<cols;x++){let k=(y*cols+x)*4,a=pixels[k+3]/255;if(a<.055)continue;const grain=(((x*73856093)^(y*19349663))>>>0)%17/17;let alpha=Math.min(.94,Math.round((a*.92+.08)*7)/7)*(.88+grain*.12);ctx.fillStyle=`rgba(${pixels[k]},${pixels[k+1]},${pixels[k+2]},${alpha})`;ctx.fillRect(x*cell+.5,y*cell+.5,cell-1,cell-1);
+if(a>.11){const glyph=glyphs[Math.min(glyphs.length-1,Math.floor(a*8))];ctx.fillStyle=light?`rgba(18,46,53,${Math.min(.76,a+.23)})`:`rgba(7,18,28,${Math.min(.86,a+.3)})`;ctx.fillText(glyph,x*cell+cell/2,y*cell+cell/2+.5);}}}
+}
+function step(dt){time+=dt;for(const j of jellies){const phase=time*j.rate+j.phase;
+// Preserve the original heading: propulsion varies, direction never changes.
+const stroke=Math.max(0,Math.cos(phase))**4,speed=(9+stroke*49)*(j.r/100*.4+.7)*j.depth;
+const vx=Math.sin(j.angle)*speed,vy=-Math.cos(j.angle)*speed;
+j.vx+=(vx-j.vx)*Math.min(1,dt*2.1);j.vy+=(vy-j.vy)*Math.min(1,dt*2.1);j.x+=j.vx*dt;j.y+=j.vy*dt;
+// Wrap only after the entire jellyfish has left the frame.
+if(j.y< -j.r*3)j.y=h+j.r*1.2;if(j.y>h+j.r*3)j.y=-j.r;if(j.x<-j.r*3)j.x=w+j.r*3;if(j.x>w+j.r*3)j.x=-j.r*3;}}
+function loop(now){raf=0;if(document.hidden||paused)return;const dt=Math.min((now-last)/1000,.05);last=now;step(dt);render();raf=requestAnimationFrame(loop);}
+function schedule(){cancelAnimationFrame(raf);raf=0;last=performance.now();if(!paused&&!document.hidden)raf=requestAnimationFrame(loop);else render();}
+// SunMoonIcon geometry adapted from https://uiarc.dev/r/icon-morph.json.
+// A single interruptible spring preserves velocity on rapid reversals.
+let morph=light?1:0,morphVelocity=0,morphTarget=morph,morphFrame=0,morphLast=0;
+const disc=document.getElementById('theme-disc'),clipDisc=document.getElementById('theme-clip-circle'),maskShadow=document.getElementById('theme-shadow-mask'),shadowEdge=document.getElementById('theme-shadow-edge'),rays=document.getElementById('theme-rays');
+function drawThemeIcon(){const radius=4.5+4*morph,cx=30-12*morph,cy=-6+12*morph;disc.setAttribute('r',radius);clipDisc.setAttribute('r',radius);for(const shadow of [maskShadow,shadowEdge]){shadow.setAttribute('cx',cx);shadow.setAttribute('cy',cy);}rays.setAttribute('transform',`translate(12 12) rotate(${90*morph}) scale(${1-.6*morph}) translate(-12 -12)`);rays.setAttribute('opacity',Math.max(0,Math.min(1,1-morph)));}
+function animateThemeIcon(now){const dt=Math.min((now-morphLast)/1000,.032);morphLast=now;const steps=4,h=dt/steps;for(let i=0;i<steps;i++){morphVelocity+=((morphTarget-morph)*300-morphVelocity*28)*h;morph+=morphVelocity*h;}drawThemeIcon();if(Math.abs(morphTarget-morph)<.001&&Math.abs(morphVelocity)<.001){morph=morphTarget;morphVelocity=0;morphFrame=0;drawThemeIcon();}else morphFrame=requestAnimationFrame(animateThemeIcon);}
+function updateThemeIcon(){morphTarget=light?1:0;if(reduced.matches){cancelAnimationFrame(morphFrame);morphFrame=0;morph=morphTarget;morphVelocity=0;drawThemeIcon();return;}if(!morphFrame){morphLast=performance.now();morphFrame=requestAnimationFrame(animateThemeIcon);}}
+drawThemeIcon();
+function applyTheme(){updateThemeIcon();themeToggle.setAttribute('aria-label',light?'Switch to dark theme':'Switch to light theme');document.documentElement.dataset.theme=light?'light':'dark';document.querySelector('meta[name="theme-color"]').content=light?'#f2f1e9':'#080f17';render();}
+addEventListener('resize',resize);
+document.addEventListener('visibilitychange',schedule);
+reduced.addEventListener('change',event=>{paused=event.matches;updateThemeIcon();schedule();});
+appearance.addEventListener('change',event=>{if(themeOverride===null){light=event.matches;applyTheme();}});
+themeToggle.addEventListener('click',()=>{light=!light;themeOverride=light?'light':'dark';try{localStorage.setItem('jellyfish-theme',themeOverride);}catch{}applyTheme();});
+resize();applyTheme();schedule();
+</script>
+</body>
+</html>
