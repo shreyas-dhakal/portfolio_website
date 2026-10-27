@@ -97,7 +97,8 @@ for(let n=0;n<4;n++){let a=n*tau/4+Math.PI/4;ink.beginPath();ink.ellipse(Math.co
 // Stable scattered particles, with a few tiny symbols suspended between them.
 function drawWater(){const count=Math.max(38,Math.min(245,Math.round(w*h/5200))),marks=['.',':','+','~','·'];ctx.font='8px ui-monospace,Menlo,Consolas,monospace';ctx.textAlign='center';ctx.textBaseline='middle';
 for(let i=0;i<count;i++){const nx=((i+1)*.61803398875)%1,ny=((i+1)*.75487766625)%1,depth=.4+(i%7)/10;
-const x=((nx*w+Math.sin(time*.055+i*2.3)*9+time*.32*depth)%w+w)%w,y=((ny*h-time*depth*1.8)%h+h)%h;
+const phase=i*2.39996,driftX=Math.cos(phase)*depth*2.4,driftY=Math.sin(phase*1.7)*depth*1.6;
+const x=((nx*w+Math.sin(time*.16+phase)*18+Math.sin(time*.07+i)*9+time*driftX)%w+w)%w,y=((ny*h+Math.cos(time*.13+phase)*14+Math.sin(time*.21+i)*6+time*driftY)%h+h)%h;
 const shimmer=.88+.12*Math.sin(time*.35+i),alpha=(i%4===0?.27:.19)*shimmer;ctx.fillStyle=light?`rgba(51,96,107,${alpha})`:`rgba(133,188,198,${alpha})`;
 if(i%3===0)ctx.fillText(marks[Math.floor(i/3)%marks.length],Math.round(x),Math.round(y));else{const size=i%7===0?2:1;ctx.fillRect(Math.round(x),Math.round(y),size,size);if(i%11===0){ctx.globalAlpha=.55;ctx.fillRect(Math.round(x)+4,Math.round(y)-3,1,1);ctx.globalAlpha=1;}}}}
 function render(){ctx.fillStyle=light?'#f2f1e9':'#080f17';ctx.fillRect(0,0,w,h);drawWater();ink.clearRect(0,0,cols,rows);jellies.forEach(jelly);const pixels=ink.getImageData(0,0,cols,rows).data;
