@@ -95,7 +95,7 @@ for(let n=0;n<21;n++){const u=n/20*2-1;ink.beginPath();ink.arc(u*rx*.9,ry*(.18+.
 // Luminous central organs, visible through the bell.
 for(let n=0;n<4;n++){let a=n*tau/4+Math.PI/4;ink.beginPath();ink.ellipse(Math.cos(a)*rx*.19,-ry*.26+Math.sin(a)*ry*.18,rx*.13,ry*.14,a,0,tau);ink.fillStyle=color(.12);ink.fill();ink.strokeStyle=color(.65);ink.lineWidth=3;ink.stroke();}ink.restore();}
 // Stable scattered particles, with a few tiny symbols suspended between them.
-function drawWater(){const count=Math.max(28,Math.min(180,Math.round(w*h/7000))),marks=['.',':','+','~','·'];ctx.font='8px ui-monospace,Menlo,Consolas,monospace';ctx.textAlign='center';ctx.textBaseline='middle';
+function drawWater(){const count=Math.max(38,Math.min(245,Math.round(w*h/5200))),marks=['.',':','+','~','·'];ctx.font='8px ui-monospace,Menlo,Consolas,monospace';ctx.textAlign='center';ctx.textBaseline='middle';
 for(let i=0;i<count;i++){const nx=((i+1)*.61803398875)%1,ny=((i+1)*.75487766625)%1,depth=.4+(i%7)/10;
 const x=((nx*w+Math.sin(time*.055+i*2.3)*9+time*.32*depth)%w+w)%w,y=((ny*h-time*depth*1.8)%h+h)%h;
 const shimmer=.88+.12*Math.sin(time*.35+i),alpha=(i%4===0?.27:.19)*shimmer;ctx.fillStyle=light?`rgba(51,96,107,${alpha})`:`rgba(133,188,198,${alpha})`;
